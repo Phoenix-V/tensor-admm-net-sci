@@ -1,0 +1,32 @@
+---
+# === Configure Main function === #
+category: Aerial
+data_name: Frame
+mask_name: Sensing
+model_name: Decoder-TNN
+#model_filename: Result/Model-Config/NBA-Decoder-TNN-T1018202307-K0.80L0.020-RMSE/models-0.0370-5775
+result_dir: Result
+result_model: Model-Config
+result_data: Validation-Result
+
+# === Configure Model Handler === #
+# Data Assignment
+batch_size: 3
+epochs: 1000
+patience: 800
+learning_rate: 0.02
+lr_decay: 0.4
+lr_decay_epoch: 20
+lr_decay_interval: 30 
+loss_func: RMSE
+upbound: 1
+max_grad_norm: 5.0
+keep_rate_forward: 0.8
+
+# === Configure in Decoder Model pipeline === #
+# Stride, Size
+num_stages: 11
+num_pattern: 7
+trans_dim: 16
+num_kernel: 16
+noise: 0.0001
