@@ -1,4 +1,4 @@
-# tensor-admm-net-sci
+# Deep Tensor Admm-Net for Video SCI
 
 This repository is the implementation of Deep Tensor ADMM-Net for Snapshot Compressive Imaging.
 
