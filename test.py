@@ -27,16 +27,16 @@ def main():
 
     with open(os.path.join(log_dir, config_id)) as handle:
         model_config = yaml.load(handle)
-    data_name = os.path.join(os.path.abspath('..'), 'Data', model_config['category'], model_config['data_name'])
+    data_name = os.path.join(os.path.abspath('.'), 'Data', model_config['category'], model_config['data_name'])
     if model_config['mask_name'] == 'Original':
         mask_name = None
     else:
-        mask_name = os.path.join(os.path.abspath('..'),'Data',model_config['category'],model_config['mask_name'])
+        mask_name = os.path.join(os.path.abspath('.'),'Data',model_config['category'],model_config['mask_name'])
         
     dataset_name = (data_name,mask_name)
     
     tf_config = tf.ConfigProto()
-    os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+    os.environ["CUDA_VISIBLE_DEVICES"] = "2" # Please change the id of GPU in your local server accordingly
     tf_config = tf.ConfigProto()
     tf_config.gpu_options.allow_growth = True
 
