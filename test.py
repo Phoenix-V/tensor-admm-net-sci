@@ -12,14 +12,7 @@ scenario = 'NBA'
 
 def main():
 
-    if scenario == 'NBA':
-        folder_id, config_id = 'NBA-Decoder-TNN', 'config-nba.yaml'
-    elif scenario == 'Crash':
-        folder_id, config_id = 'Crash-Decoder-TNN-T0808105703-K0.80L0.020-RMSE', 'config_13.yaml'
-    elif scenario == 'Aerial':
-        folder_id, config_id = 'Aerial-Decoder-TNN-T0808105703-K0.80L0.020-RMSE', 'config_34.yaml'
-    else:
-        folder_id, config_id = 'NBA-Decoder-TNN-T0808105703-K0.80L0.020-RMSE', 'config_34.yaml'
+    folder_id, config_id = 'NBA-Decoder-TNN', 'config-nba.yaml'
 
     with open(config_filename) as handle:
         model_config = yaml.load(handle)
